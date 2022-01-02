@@ -1,1 +1,7 @@
 # practico-js
+
+...
+
+
+## Figuras geométricas
+

@@ -1,0 +1,93 @@
+/*Hacer figuras en canva  */
+:root {
+    --primary-color: #97BFB4;
+    --seconday-color: #F5EEDC;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Dosis', sans-serif;
+}
+.title {
+    text-align: right;
+}
+.figures-content {
+    display: flex;
+    justify-content: center;
+}
+.figure-container {
+    padding: 20px;
+    border-radius: 20px;
+    border: 4px dashed #4F091D;
+
+    width: 260px;
+    min-height: 260px;
+    
+    background-color: var(--primary-color);
+    
+}
+.figure-container .subtitle {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: end;
+    color: var(--text-color);
+}
+.figure-container h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 8px;
+}
+.figure-form-container {
+    display: flex;
+    flex-direction: column;
+
+    margin: 24px 0;
+}
+.figure-info {
+    display: flex;
+}
+.figure-info input {
+    font-size: 16px;
+
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 0 4px;
+
+    width: 60px;
+}
+.primary-button {
+    align-self: center;
+
+    padding: 4px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 20px;
+
+    width: 120px;
+
+    color: #DD4A48;
+    font-weight: 800;
+    background-color: var(--seconday-color);
+    font-family: 'Dosis', sans-serif;
+
+    cursor: pointer;
+}
+.primary-button:hover {
+    border: #DD4A48;
+    box-shadow: 4px 4px #DD4A48;
+    background-color: #FBFFE2;
+}
+.measurements-container {
+    display: none;
+}
+.measurements-container p {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}

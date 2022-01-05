@@ -1,7 +1,9 @@
-/*Hacer figuras en canva  */
 :root {
-    --primary-color: #97BFB4;
-    --seconday-color: #FFBF86;
+    /* --primary-color: #97BFB4;
+    --seconday-color: #FFBF86; */
+    --primary-color: #88E0EF;
+    --secondary-color: #161E54;
+    --text-color: #FF5151;
 }
 * {
     margin: 0;
@@ -11,22 +13,103 @@
 body {
     font-family: 'Dosis', sans-serif;
 }
+.header-container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+.logo-container {
+    width: 120px;
+    height: 100%;
+    margin: 0 20px;
+}
+.logo {
+    width: 120px;
+    max-height: 80px;
+    padding: 4px 0;
+}
+nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-nav, .right-nav{
+    display: flex;
+    list-style: none;
+}
+.left-nav a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    height: 80px;
+    padding: 0 20px;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.left-nav a:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
+.header-icons {
+    width: 36px;
+    border-radius: 40%;
+    margin-right: 4px;
+}
+.menu-icon {
+    display: none;
+}
+.header-icons:hover {
+    background-color: var(--primary-color);
+    opacity: 0.8;    
+}
+.title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    width: 100%;
+
+    border-top: 2px solid black;
+
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px var(--secondary-color);
+}
 .title {
-    text-align: right;
+    padding-right: 20px;
+
+    color:#FF9B6A;
+
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+.home-icon{
+    width: 36px;
+    margin-left: 20px;
+}
+.home-icon:hover{
+    opacity: 0.85;
 }
 .figures-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  
 }
 .figure-container {
+    margin-top: 20px;
     padding: 20px;
     border-radius: 20px;
     border: 4px dashed #4F091D;
 
     width: 260px;
     min-height: 260px;
-
 }
 .square-container {
     background-color: #F3F0D7;
@@ -42,7 +125,6 @@ body {
     font-size: 32px;
     font-weight: 700;
     text-align: end;
-    color: var(--text-color);
 }
 .figure-container h3 {
     font-size: 24px;
@@ -104,11 +186,42 @@ body {
     font-weight: 500;
     letter-spacing: 2px;
 }
+@media(max-width: 660px){
+    .header-container{
+        height: 60px;
+        justify-content: space-between;
+    }
+    .left-nav {
+        display: none;
+    }
+    nav {
+        width: auto;
+    }
+    .logo-container {
+        width: 40px;
+        height: 60px;
+    }
+    .logo {
+        width: 40px;
+        max-height: 100%;
+        content: url(../icons/logo2.png);
+    }
+    .menu-icon {
+        display: initial;
+    }
+    .account-icon, .language-icon {
+        display: none;
+    }
+    .title {
+        font-size: 20px;
+    }
+}
 @media(max-width: 800px){
     .figures-content {
         gap: 12px;
     }
     .triangle-container{
         order: 3;
-    }
+        font-weight: 700;
+}
 }

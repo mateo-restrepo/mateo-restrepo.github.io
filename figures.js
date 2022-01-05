@@ -83,6 +83,16 @@ function calculateCircleMeasures(){
 // console.log('El área del cuadrado es ' + squareArea + ' cm^2');
 // console.groupEnd();
 
-// Tríangulo
 
+let titleSection = document.getElementsByClassName('title-section')[0];
 
+window.onscroll = function() {
+    if(window.scrollY >=80){
+        titleSection.style.position='fixed';
+        titleSection.style.top='0';
+    }  
+    else {
+        titleSection.style.position='initial';
+        titleSection.style.top='none';
+    }
+  }

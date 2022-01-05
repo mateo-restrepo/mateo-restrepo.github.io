@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figuras Geométricas</title>
+    <title>Mathelp</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +13,31 @@
 
 <body>
     <header>
-        <h1 class="title">Area and Perimeter</h1>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html"><img src="icons/logo.png" alt="logo" class="logo" title="Home"></a>
+            </div>
+            <nav>
+                <ul class="left-nav">
+                    <li><a href="figures.html">Geometrics Figures</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="index.html">More</a></li>
+                </ul>
+                <div class="right-nav">
+                    <a href="#"><img src="icons/account-icon.png" alt="account icon" class="account-icon header-icons" title="My account"></a>
+                    <a href="#"><img src="icons/language-icon.png" alt="language icon" class="language-icon header-icons" title="Change Language"></a>
+                    <a href="#"><img src="icons/menu-icon.png" alt="menu icon" class="menu-icon header-icons" title="Menu"></a>
+                </div>
+            </nav>
+        </div>
     </header>
-
     <main>
+        <div class="title-section">
+            <h1 class="title">Area and Perimeter</h1>
+            <a href="index.html"><img src="icons/white-home-logo.png" alt="home icon"
+                class="home-icon" title="Home"></a>
+        </div>
+        
         <section class="figures-content">
             <div class="figure-container square-container">
                 <h2 class="subtitle">SQUARE</h2>
@@ -41,13 +61,13 @@
                     </div>
                     <button class='primary-button' type="button" onclick="calculateSquareMeasures()">CALCULATE</button>
                 </form>
-    
+
                 <div class="measurements-container">
                     <div class="square-info">
                         <h3>Perimeter</h3>
                         <p class="result square-perimeter"></p>
                     </div>
-                   <div class="square-info">
+                    <div class="square-info">
                         <h3>Area</h3>
                         <p class="result square-area"></p>   
                    </div>
@@ -134,14 +154,8 @@
             </div>
 
         </section>
-        
-
-     
     </main>
-
-
     <p id='res'></p>
-    <script src="figuras.js"></script>
+    <script src="figures.js"></script>
 </body>
-
 </html>

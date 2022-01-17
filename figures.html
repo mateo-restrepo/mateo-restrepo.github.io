@@ -12,21 +12,22 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="header-container">
             <div class="logo-container">
-                <a href="index.html"><img src="icons/logo.png" alt="logo" class="logo" title="Home"></a>
+                <a href="#"><img src="icons/logo.png" alt="logo" class="logo" title="Home"></a>
             </div>
             <nav>
                 <ul class="left-nav">
-                    <li><a href="figures.html">Geometrics Figures</a></li>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="index.html">More</a></li>
+                    <li><a href="#">Geometrics Figures</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">More</a></li>
                 </ul>
                 <div class="right-nav">
-                    <a href="#"><img src="icons/account-icon.png" alt="account icon" class="account-icon header-icons" title="My account"></a>
-                    <a href="#"><img src="icons/language-icon.png" alt="language icon" class="language-icon header-icons" title="Change Language"></a>
-                    <a href="#"><img src="icons/menu-icon.png" alt="menu icon" class="menu-icon header-icons" title="Menu"></a>
+                    <a href="#"><img src="icons/language-icon.png" alt="language icon"
+                            class="language-icon header-icons" title="Change Language"></a>
+                    <a href="#"><img src="icons/menu-icon.png" alt="menu icon" class="menu-icon header-icons"
+                            title="Menu"></a>
                 </div>
             </nav>
         </div>
@@ -34,128 +35,143 @@
     <main>
         <div class="title-section">
             <h1 class="title">Area and Perimeter</h1>
-            <a href="index.html"><img src="icons/white-home-logo.png" alt="home icon"
-                class="home-icon" title="Home"></a>
+            <a href="#" class="home-icon-container"><img src="icons/white-home-logo.png" alt="home icon"
+                    class="home-icon" title="Home"></a>
         </div>
-        
+
         <section class="figures-content">
-            <div class="figure-container square-container">
-                <h2 class="subtitle">SQUARE</h2>
-                <form action="" class="figure-form-container">
-                    <div class="figure-info square-form" >
-                        <label for="square-input"><h3>Side</h3></label>
-                        <input type="number" id='square-input' placeholder="0">
-    
-                        <label for="measure-input"></label>
-                        <input list="measures-list" class="measure-input" placeholder="cm">
-    
-                        <datalist id="measures-list">
-                            <option value="mm">
-                            <option value="dm">
-                            <option value="cm">
-                            <option value="m">
-                            <option value="Dm">
-                            <option value="Hm">
-                            <option value="Km">
-                        </datalist>
-                    </div>
-                    <button class='primary-button' type="button" onclick="calculateSquareMeasures()">CALCULATE</button>
-                </form>
+            <div class="square-content">
+                <div class="figure-container square-container">
+                    <h2 class="subtitle">SQUARE</h2>
+                    <form action="" class="figure-form-container">
+                        <div class="figure-info square-form">
+                            <label for="square-input">
+                                <h3>Side</h3>
+                            </label>
+                            <input type="number" id='square-input' placeholder="0">
 
-                <div class="measurements-container">
-                    <div class="square-info">
-                        <h3>Perimeter</h3>
-                        <p class="result square-perimeter"></p>
+                            <label for="square-measure-input"></label>
+                            <select name="measure" class="measure-selector" id="square-measure-input">
+                                <option value="mm">mm</option>
+                                <option value="dm">dm</option>
+                                <option value="cm">cm</option>
+                                <option value="m">m</option>
+                                <option value="Dm">Dm</option>
+                                <option value="Hm">Hm</option>
+                                <option value="Km">Km</option>
+                            </select>
+                        </div>
+                        <button class='primary-button' type="button"
+                            onclick="calculateSquareMeasures()">CALCULATE</button>
+                    </form>
+
+                    <div class="measurements-container">
+                        <div class="square-info">
+                            <h3>Perimeter</h3>
+                            <p class="result square-perimeter"></p>
+                        </div>
+                        <div class="square-info">
+                            <h3>Area</h3>
+                            <p class="result square-area"></p>
+                        </div>
                     </div>
-                    <div class="square-info">
-                        <h3>Area</h3>
-                        <p class="result square-area"></p>   
-                   </div>
                 </div>
             </div>
 
-            <div class="figure-container triangle-container">
-                <h2 class="subtitle">TRIANGLE</h2>
-                <form action="" class="figure-form-container">
-                    <div class="figure-info triangle-form">
-                        <label for="triangle-side1"><h3>Side 1</h3></label>
-                        <input type="number" id='triangle-side1' placeholder="0">
+            <div class="triangle-content">
+                <div class="figure-container triangle-container">
+                    <h2 class="subtitle">TRIANGLE</h2>
+                    <form action="" class="figure-form-container">
+                        <div class="figure-info triangle-form">
+                            <label for="triangle-side1">
+                                <h3>Side 1</h3>
+                            </label>
+                            <input type="number" id='triangle-side1' placeholder="0">
 
-                        <label for="triangle-side2"><h3>Side 2</h3></label>
-                        <input type="number" id='triangle-side2' placeholder="0">
+                            <label for="triangle-side2">
+                                <h3>Side 2</h3>
+                            </label>
+                            <input type="number" id='triangle-side2' placeholder="0">
 
-                        <label for="triangle-base"><h3>Base</h3></label>
-                        <input type="number" id='triangle-base' placeholder="0">
+                            <label for="triangle-base">
+                                <h3>Base</h3>
+                            </label>
+                            <input type="number" id='triangle-base' placeholder="0">
 
-                        <label for="triangle-height"><h3>Height</h3></label>
-                        <input type="number" id='triangle-height' placeholder="0">
-    
-                        <label for="measure-input"></label>
-                        <input list="measures-list" class="measure-input" placeholder="cm">
-    
-                        <datalist id="measures-list">
-                            <option value="mm">
-                            <option value="dm">
-                            <option value="cm">
-                            <option value="m">
-                            <option value="Dm">
-                            <option value="Hm">
-                            <option value="Km">
-                        </datalist>
+                            <label for="triangle-height">
+                                <h3>Height</h3>
+                            </label>
+                            <input type="number" id='triangle-height' placeholder="0">
+
+                            <label for="traingle-measure-input"></label>
+                            <select name="measure" class="measure-selector" id="triangle-measure-input">
+                                <option value="mm">mm</option>
+                                <option value="dm">dm</option>
+                                <option value="cm">cm</option>
+                                <option value="m">m</option>
+                                <option value="Dm">Dm</option>
+                                <option value="Hm">Hm</option>
+                                <option value="Km">Km</option>
+                            </select>
+                        </div>
+                        <button class='primary-button' type='button'
+                            onclick="calculateTriangleMeasures()">CALCULATE</button>
+                    </form>
+
+                    <div class="measurements-container">
+                        <div class="triangle-info">
+                            <h3>Perimeter</h3>
+                            <p class="result triangle-perimeter"></p>
+                        </div>
+                        <div class="triangle-info">
+                            <h3>Area</h3>
+                            <p class="result triangle-area"></p>
+                        </div>
                     </div>
-                    <button class='primary-button' type="button" onclick="calculateTriangleMeasures()">CALCULATE</button>
-                </form>
-    
-                <div class="measurements-container">
-                    <div class="triangle-info">
-                        <h3>Perimeter</h3>
-                        <p class="result triangle-perimeter"></p>
-                    </div>
-                   <div class="triangle-info">
-                        <h3>Area</h3>
-                        <p class="result triangle-area"></p>   
-                   </div>
                 </div>
             </div>
 
-            <div class="figure-container circle-container">
-                <h2 class="subtitle">CIRCLE</h2>
-                <form action="" class="figure-form-container">
-                    <div class="figure-info circle-form" >
-                        <label for="circle-input"><h3>Radius</h3></label>
-                        <input type="number" id='circle-input' placeholder="0">
-    
-                        <label for="measure-input"></label>
-                        <input list="measures-list" class="measure-input" placeholder="cm">
-    
-                        <datalist id="measures-list">
-                            <option value="mm">
-                            <option value="dm">
-                            <option value="cm">
-                            <option value="m">
-                            <option value="Dm">
-                            <option value="Hm">
-                            <option value="Km">
-                        </datalist>
+            <div class="circle-content">
+                <div class="figure-container circle-container">
+                    <h2 class="subtitle">CIRCLE</h2>
+                    <form action="" class="figure-form-container">
+                        <div class="figure-info circle-form">
+                            <label for="circle-input">
+                                <h3>Radius</h3>
+                            </label>
+                            <input type="number" id='circle-input' placeholder="0">
+
+                            <label for="circle-measure-input"></label>
+                            <select name="measure" class="measure-selector" id="circle-measure-input">
+                                <option value="mm">mm</option>
+                                <option value="dm">dm</option>
+                                <option value="cm">cm</option>
+                                <option value="m">m</option>
+                                <option value="Dm">Dm</option>
+                                <option value="Hm">Hm</option>
+                                <option value="Km">Km</option>
+                            </select>
+                        </div>
+                        <button class='primary-button' type="button"
+                            onclick="calculateCircleMeasures()">CALCULATE</button>
+                    </form>
+
+                    <div class="measurements-container">
+                        <div class="circle-info">
+                            <h3>Perimeter</h3>
+                            <p class="result circle-perimeter"></p>
+                        </div>
+                        <div class="circle-info">
+                            <h3>Area</h3>
+                            <p class="result circle-area"></p>
+                        </div>
                     </div>
-                    <button class='primary-button' type="button" onclick="calculateCircleMeasures()">CALCULATE</button>
-                </form>
-    
-                <div class="measurements-container">
-                    <div class="circle-info">
-                        <h3>Perimeter</h3>
-                        <p class="result circle-perimeter"></p>
-                    </div>
-                   <div class="circle-info">
-                        <h3>Area</h3>
-                        <p class="result circle-area"></p>   
-                   </div>
                 </div>
             </div>
-
         </section>
     </main>
     <p id='res'></p>
     <script src="figures.js"></script>
 </body>
+
 </html>

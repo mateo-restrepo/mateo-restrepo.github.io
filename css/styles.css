@@ -1,9 +1,8 @@
 :root {
-    /* --primary-color: #97BFB4;
-    --seconday-color: #FFBF86; */
-    --primary-color: #88E0EF;
-    --secondary-color: #161E54;
-    --text-color: #FF5151;
+    --primary-color: #FBF3E4;
+    --secondary-color: #B91646;
+    --text-color: #105652;
+    --background: #F6F6F6;
 }
 * {
     margin: 0;
@@ -17,6 +16,7 @@ body {
     display: flex;
     align-items: center;
     height: 80px;
+    background-color: var(--primary-color);
 }
 .logo-container {
     width: 120px;
@@ -24,9 +24,10 @@ body {
     margin: 0 20px;
 }
 .logo {
-    width: 120px;
+    width: 100px;
     max-height: 80px;
     padding: 4px 0;
+    object-fit: cover;
 }
 nav {
     display: flex;
@@ -53,7 +54,8 @@ nav {
     color: var(--secondary-color);
 }
 .left-nav a:hover{
-    background-color: var(--primary-color);
+    opacity: 0.95;
+    background-color: var(--secondary-color);
     color: white;
 }
 .header-icons {
@@ -65,8 +67,11 @@ nav {
     display: none;
 }
 .header-icons:hover {
-    background-color: var(--primary-color);
-    opacity: 0.8;    
+    opacity: 0.6;    
+}
+main {
+    min-height: 80vh;
+    background-color: var(--background);
 }
 .title-section {
     display: flex;
@@ -76,22 +81,26 @@ nav {
 
     width: 100%;
 
-    border-top: 2px solid black;
-
     background-color: var(--secondary-color);
     box-shadow: 0 2px 4px var(--secondary-color);
 }
 .title {
     padding-right: 20px;
 
-    color:#FF9B6A;
+    color: white;;
 
     font-size: 28px;
     letter-spacing: 2px;
 }
+.home-icon-container {
+    display: grid;
+    place-items: center;
+    margin-left: 20px;
+    height: 100%;
+}
 .home-icon{
     width: 36px;
-    margin-left: 20px;
+    object-position: center;
 }
 .home-icon:hover{
     opacity: 0.85;
@@ -100,16 +109,19 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 12px;
+    min-height: 80vh;
+    margin-top: 40px;
+  
   
 }
 .figure-container {
-    margin-top: 20px;
     padding: 20px;
     border-radius: 20px;
     border: 4px dashed #4F091D;
 
     width: 260px;
-    min-height: 260px;
+    min-height: 360px;
 }
 .square-container {
     background-color: #F3F0D7;
@@ -135,7 +147,7 @@ nav {
     display: flex;
     flex-direction: column;
     
-    margin: 24px 0;
+    margin-top: 24px;
 }
 .square-form, .circle-form {
     display: flex;
@@ -143,6 +155,9 @@ nav {
 .triangle-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+.figure-info {
+    align-items: center;
 }
 .figure-info input {
     font-size: 16px;
@@ -160,12 +175,13 @@ nav {
     padding: 4px;
     border: none;
     border-radius: 8px;
-    margin-top: 20px;
-    font-size: 20px;
+    margin: 20px 0;
+    border: 1px solid var(--text-color);
 
     width: 120px;
 
-    color: #DD4A48;
+    color: var(--text-color);
+    font-size: 20px;
     font-weight: 800;
     background-color: #FBF3E4;
     font-family: 'Dosis', sans-serif;
@@ -173,7 +189,7 @@ nav {
     cursor: pointer;
 }
 .primary-button:hover {
-    border: #DD4A48;
+    border-color: #FBFFE2;
     box-shadow: 4px 4px #DD4A48;
     background-color: #FBFFE2;
 }
@@ -186,6 +202,7 @@ nav {
     font-weight: 500;
     letter-spacing: 2px;
 }
+
 @media(max-width: 660px){
     .header-container{
         height: 60px;
@@ -202,9 +219,7 @@ nav {
         height: 60px;
     }
     .logo {
-        width: 40px;
-        max-height: 100%;
-        content: url(../icons/logo2.png);
+        display: none;
     }
     .menu-icon {
         display: initial;
@@ -216,12 +231,16 @@ nav {
         font-size: 20px;
     }
 }
+.measure-selector {
+    border: none;
+    width: 48px;
+    height: 28px;
+}
+#triangle-measure-input {
+    margin: 4px;
+}
 @media(max-width: 800px){
-    .figures-content {
-        gap: 12px;
-    }
-    .triangle-container{
+    .triangle-content{
         order: 3;
-        font-weight: 700;
 }
 }

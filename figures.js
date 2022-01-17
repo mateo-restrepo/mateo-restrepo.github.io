@@ -30,11 +30,7 @@ function circleArea(radius){
 
 function calculateSquareMeasures(){
     let side = Number(document.getElementById('square-input').value);
-    let measure = document.getElementsByClassName('measure-input')[0].value;
-
-    if(measure === ''){
-        measure = 'cm';
-    }
+    let measure = document.getElementById('square-measure-input').value;
 
     document.getElementsByClassName('square-perimeter')[0].innerHTML=
     squarePerimeter(side)+ ' ' + measure;
@@ -49,11 +45,7 @@ function calculateTriangleMeasures(){
     let side2 = Number(document.getElementById('triangle-side2').value);
     let base = Number(document.getElementById('triangle-base').value);
     let height = Number(document.getElementById('triangle-height').value);
-    let measure = document.getElementsByClassName('measure-input')[1].value;
-
-    if(!measure){
-        measure = 'cm';
-    }
+    let measure = document.getElementById('triangle-measure-input').value;
 
     document.getElementsByClassName('triangle-perimeter')[0].innerHTML=
     trianglePerimeter(side1, side2, base)+ ' ' + measure;
@@ -65,11 +57,7 @@ function calculateTriangleMeasures(){
 
 function calculateCircleMeasures(){
     let radius = Number(document.getElementById('circle-input').value);
-    let measure = document.getElementsByClassName('measure-input')[2].value;
-
-    if(!measure){
-        measure = 'cm';
-    }
+    let measure = document.getElementById('circle-measure-input').value;
 
     document.getElementsByClassName('circle-perimeter')[0].innerHTML=
     circlePerimeter(radius)+ ' ' + measure;
@@ -87,7 +75,9 @@ function calculateCircleMeasures(){
 let titleSection = document.getElementsByClassName('title-section')[0];
 
 window.onscroll = function() {
-    if(window.scrollY >=80){
+    let headerHeight = document.getElementsByClassName('header-container')[0].offsetHeight;
+
+    if(window.scrollY >= headerHeight){
         titleSection.style.position='fixed';
         titleSection.style.top='0';
     }  

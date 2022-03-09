@@ -2,4 +2,5 @@
 *.jpg
 icons/*
 !icons/logo.png
-!icons/logo2.png
+!icons/list.svg
+!icons/home.svg

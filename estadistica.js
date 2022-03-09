@@ -2,7 +2,6 @@ import {calcularMediaAritmetica, calcularMediana, calcularModa, calcularMediaPon
 
 let data = document.getElementsByClassName("input"),
 r = document.getElementById("result");
-console.log(data);
 
 data[0].addEventListener("click", () => {
     let l = document.getElementById("list-of-numbers").value;

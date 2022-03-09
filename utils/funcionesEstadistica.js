@@ -40,11 +40,9 @@ const calcularModa = (arr = []) => {
     arr.forEach(i => reps[i] = reps[i] ? reps[i] + 1 : 1);
     console.log(reps);
     const max = Math.max(...Object.values(reps));
-    // console.log("max: ", max)
     const moda = []
     for(let i in reps){
         if(reps[i] === max){moda.push(Number(i))}
-        // console.log(moda);
     }
     return moda;
     }

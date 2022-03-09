@@ -208,6 +208,7 @@ nav {
     .title {
         font-size: 20px;
     }
+
 }
 .measure-selector {
     border: none;
@@ -220,5 +221,9 @@ nav {
 @media(max-width: 800px){
     .triangle-content{
         order: 3;
-}
+    }
+.figure-container {
+    min-height: 0;
+    height: auto;
+    }
 }
